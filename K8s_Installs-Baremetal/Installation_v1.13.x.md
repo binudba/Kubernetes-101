@@ -76,7 +76,8 @@ Following are the basic pre-installation and installaion steps for K8s v1.13.1 i
     docker info | grep -i cgroup
     
 ```
-    edit /var/lib/kubelet/kubeadm-flags.env and verify the following : cgroup-driver=cgroupfs 
+  edit /var/lib/kubelet/kubeadm-flags.env and verify the following : cgroup-driver=cgroupfs 
+
 ```    
     KUBELET_KUBEADM_ARGS=--cgroup-driver=cgroupfs
 ```
