@@ -42,7 +42,7 @@ Following are the basic pre-installation and installaion steps for K8s v1.13.1 i
     EOF
 
   2. Config settings for iptables on CentOS or RHEL
-  
+```  
   cat <<__EOF__ >  /etc/sysctl.d/k8s.conf
   net.bridge.bridge-nf-call-ip6tables = 1
   net.bridge.bridge-nf-call-iptables = 1
@@ -51,6 +51,6 @@ Following are the basic pre-installation and installaion steps for K8s v1.13.1 i
   sysctl --system
   sysctl -p
   modprobe br_netfilter
-  
+```  
   
     
