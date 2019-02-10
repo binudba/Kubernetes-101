@@ -24,7 +24,18 @@ Following are the basic pre-installation and installaion steps for K8s v1.13.1 i
         swapoff -a
         
   ```
-      
+
+##### Docker installation - version 18.06
+
+  1. Setup the repo
+
+```
+    yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    yum install docker-ce-18.06.1.ce-3.el7.x86_64
+
+  	systemctl enable docker
+	  systemctl start docker
+```
       
 ##### K8s Installation
 
@@ -53,4 +64,19 @@ Following are the basic pre-installation and installaion steps for K8s v1.13.1 i
   modprobe br_netfilter
 ```  
   
+ 3. Install the latest version of K8s
+ 
+```
+    yum install kubeadm kubelet kubectl
+```
+
+  4. Configure cgroup driver for kubelet
+
+```
+    docker info | grep -i cgroup
     
+```
+    edit /var/lib/kubelet/kubeadm-flags.env and verify the following : cgroup-driver=cgroupfs 
+```    
+    KUBELET_KUBEADM_ARGS=--cgroup-driver=cgroupfs
+```
