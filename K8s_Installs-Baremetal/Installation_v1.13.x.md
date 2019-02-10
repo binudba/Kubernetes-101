@@ -85,10 +85,11 @@ Following are the basic pre-installation and installaion steps for K8s v1.13.1 i
   5. Bootstraping Kubernetes cluster with kubeadm - single node 
   
      Initializing K8s master and select netwrok addon (example: flannel or canal)
-     
+
+```
      kubeadm init --pod-network-cidr=10.244.0.0/16
      
      kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
      
-  
+```  
 
