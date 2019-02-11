@@ -37,7 +37,7 @@ Following are the basic pre-installation and installaion steps for K8s v1.13.1 i
 	  systemctl start docker
 ```
       
-##### K8s Installation
+##### K8s Installation - Master node
 
   1. Setup K8s repo
   
@@ -92,4 +92,9 @@ Following are the basic pre-installation and installaion steps for K8s v1.13.1 i
      kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
      
 ```  
+     When kubeadm init command completes, it will give a join string which is to be run on any number of servers and that will add a worker node to K8s cluster.  
 
+##### K8s Installation - Worker node
+
+   Follow the pre-validation and Docker installation steps first. Then complete K8s installation steps 1 to 4 and then run the join string to add a worker node to the cluster.
+   
