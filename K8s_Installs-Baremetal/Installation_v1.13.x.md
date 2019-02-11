@@ -98,7 +98,7 @@ When kubeadm init command completes, it will give a join string which is to be r
 
 Follow the pre-validation and Docker installation steps first. Then complete K8s installation steps 1 to 4 and then run the join string to add a worker node to the cluster.
 
-    After adding a worker node logon to the master node and run following command to verify the cluster nodes status.
+   After adding a worker node logon to the master node and run following command to verify the cluster nodes status.
     
 ```
      kubectl get node -o wide
