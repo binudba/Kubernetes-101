@@ -1,7 +1,7 @@
 
-#### Kubernetes Installation v1.13.1 - Single Master
+#### Kubernetes Installation v1.13.2 - Single Master
 
-Following are the basic pre-installation and installaion steps for K8s v1.13.1 installation. Each server should have minimum of 2GB memory and 2 CPUs.
+Following are the basic pre-installation and installaion steps for K8s v1.13.x installation. Each server should have minimum of 2GB memory and 2 CPUs.
 
 ##### Pre-validations
 
@@ -97,4 +97,9 @@ When kubeadm init command completes, it will give a join string which is to be r
 ##### K8s Installation - Worker node
 
 Follow the pre-validation and Docker installation steps first. Then complete K8s installation steps 1 to 4 and then run the join string to add a worker node to the cluster.
-   
+
+    After adding a worker node logon to the master node and run following command to verify the cluster nodes status.
+    
+```
+     kubectl get node -o wide
+```
