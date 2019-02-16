@@ -1,14 +1,15 @@
 
 ### Canal implementation
 
-Verify cluster cidr is set to 10.244.0.0/16 in control manager. Remove existing CNI from the cluster. 
+Verify cluster cidr is set to 10.244.0.0/16 in control manager. 
 
 On masters only: (on first master)
 
+Remove existing CNI from the cluster. This will affect the pods running and they will turn into error status. 
 ```
   kubectl delete -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
 ```
-If needed clean up contents in /etc/cni/net.d and reboot the servers one by one. This will affect the pods running and they will turn into error status. 
+If needed clean up all contents of /etc/cni/net.d and restart docker, kubelet services. OR reboot the servers one by one . 
 
 Once node is back up, run following to implement Canal :
 ```
