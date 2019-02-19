@@ -5,5 +5,5 @@ Kubernetes Dashboard is a web UI for managing containerized app deployments and 
 
 The Dashboard UI is not deployed by default. It is to be created as an add-on. 
 
-K8s-dashboard.md document is summarizing UI deployment and configuration steps. It is made easy for the beginners who wants to deploy a cluster instantly.   
+'K8s-dashboard.md' document is summarizing UI deployment and configuration steps. It is made easy for the beginners who wants to deploy a cluster instantly.   
 
