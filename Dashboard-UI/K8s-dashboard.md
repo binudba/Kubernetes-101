@@ -36,4 +36,4 @@ Try accessging K8s Web UI from browser. use you master node and the dashboard UI
   https://masternode-IP:30201
   
   
-  
+  Note :  Please use FireFox or Chrome for accessing UI.
