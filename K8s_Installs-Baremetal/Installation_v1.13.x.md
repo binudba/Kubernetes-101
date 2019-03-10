@@ -103,3 +103,19 @@ Follow the pre-validation and Docker installation steps first. Then complete K8s
 ```
      kubectl get node -o wide
 ```
+
+
+#### Tear Down Cluster
+
+Run following on each node to tear down cluster.
+
+```
+	kubeadm reset node
+```
+
+Remove binaries
+
+```
+	yum erase kubectl kubeadm kubelet kubectl docker-ce
+	
+```
